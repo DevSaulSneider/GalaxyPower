@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1rem 2rem 2rem;
+    background-color: #000000;
+    color: #ffffff;
+}
+.navbar__container-logo{
+    width: 30%;
+}
+.navbar__container-logo > img{
+    width: 100%;
+}
+.navbar__menu{
+    display: flex;
+    gap: 20px;
+}
+.navbar__links{
+    color: #ffffff;
+    font-weight: 500;
+    padding: 0.5rem;
+}
+.navbar__links:hover{
+    color: orange;
+    transition: .3s ease-in;
+}
+.toggle-button{
+    position: absolute;
+    /* top: .75rem; */
+    right: 1rem;
+    display: none;
+}
+.navbar__icon{
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* HERO */
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    gap: 2em
+;
+}
+.hero__title{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+.hero__text{
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+.hero__button{
+    background-color: orange;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+.hero__button:hover{
+    background-color: #ffffff;
+    color: orange;
+    transition: .3s ease-in;
+}
+@media (max-width: 680px){
+    .navbar__container-logo{
+        width: 50%;
+    }
+    .navbar__container-links{
+        display: none;
+        width: 100%;
+    }
+    .toggle-button{
+        display: block;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar__menu{
+        width: 100%;
+        flex-direction: column;
+        /* padding-top: 1rem; */
+    }
+    .navbar__item{
+        text-align: center;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+    .navbar__container-links.active{
+        display: flex;
+    }
+}
